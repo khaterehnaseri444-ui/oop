@@ -11,6 +11,15 @@ class Laptops {
       `Laptop Name : ${this.name} | Laptop Price : ${this.price} | Laptop Status : ${status}`,
     );
   }
+
+  buyLaptop() {
+    if (this.available) {
+      this.available = false;
+      console.log(`${this.name} has bought`);
+    } else {
+      console.log(`${this.name} is not available`);
+    }
+  }
 }
 
 class HP extends Laptops {
@@ -44,3 +53,6 @@ myHP.displayData();
 
 const myMAC = new MACBook("MAC Laptop", "$900", "apple", "touch");
 myMAC.displayData();
+
+myHP.buyLaptop();
+// myHP.buyLaptop()

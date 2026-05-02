@@ -55,4 +55,34 @@ const myMAC = new MACBook("MAC Laptop", "$900", "apple", "touch");
 myMAC.displayData();
 
 myHP.buyLaptop();
-// myHP.buyLaptop()
+// myHP.buyLaptop() ==> now we can see hp laptop is not available
+
+//Animals Can Make Sounds
+
+class Animals {
+  constructor(name) {
+    this.name = name;
+  }
+
+  makeSound() {
+    console.log(`${this.name} can make a sound`);
+  }
+}
+
+class Dog extends Animals {
+  makeSound() {
+    console.log(`${this.name} can say hap hap`);
+  }
+}
+
+class Cat extends Animals {
+  makeSound() {
+    console.log(`${this.name} can say mewwww`);
+  }
+}
+
+const myDog = new Dog("Rex");
+myDog.makeSound();
+
+const myCat = new Cat("katii");
+myCat.makeSound();
